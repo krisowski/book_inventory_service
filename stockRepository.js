@@ -49,9 +49,16 @@ module.exports = {
         return collection.find({"isbn": isbn}).limit(1).next();
       }).then(function(result) {
         if (result) {
-          return result.count;
+          res.format({
+            'text/html': function () {
+              res.send('<div>Copies left: ' + result + '</div>');
+            },
+            'default': function () {
+              res.send({count: result});
+            }
+          });
         } else {
-          return null;
+          next();
         }
       });
   }
