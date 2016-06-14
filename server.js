@@ -14,7 +14,7 @@ server.listen(3000, function () {
 var stockRepository = require('./stockRepository');
 var app = require('./app.js')(stockRepository);
 
-app.listen(3000, function () {
+app.listen(process.env.PORT, function () {
   console.log('Example app listening on port 3000!');
 });
 
