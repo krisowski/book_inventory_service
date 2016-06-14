@@ -4,7 +4,7 @@ var _ = require('lodash');
 var test = {
 //    name: 'book-inventory-kris-test'
     name: 'book-inventory-kris',
-    config_vars: { MONGODB_URI: process.env.MONGODB_URI, NODE_ENV: 'test' },
+    config_vars: { MONGODB_URI: process.env.MONGODB_URI, NODE_ENV: 'test' }
 };
 
 base.configurator(_.merge({}, base.config, test));
