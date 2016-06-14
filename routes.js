@@ -37,7 +37,7 @@ module.exports = function(stockRepository) {
 
     hello:  function (req, res) {
       //throw new Error('ERROR');
-      res.send('Hello World Express! ', process.env.NODE_ENV);
+      res.send('Hello World Express! ' + process.env.NODE_ENV);
     }
 
   };
